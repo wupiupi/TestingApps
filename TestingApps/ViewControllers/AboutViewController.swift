@@ -9,4 +9,9 @@ import UIKit
 
 final class AboutViewController: UIViewController {
 
+    @IBOutlet var greetingLabel: UILabel!
+    
+    @IBAction func logoutButtonDidTapped() {
+    }
+    
 }
