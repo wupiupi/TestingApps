@@ -25,5 +25,4 @@ final class SettingsViewController: UIViewController {
     @IBAction func closeButtonAction() {
         dismiss(animated: true)
     }
-    
 }
