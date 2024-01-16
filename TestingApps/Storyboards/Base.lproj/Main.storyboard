@@ -81,7 +81,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="FFO-Gb-c7Y">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <segue destination="vvH-Uj-CPD" kind="presentation" id="byn-Vj-5aB"/>
+                                <segue destination="QMS-8Q-a6W" kind="presentation" id="Zvm-Ra-oFT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -95,16 +95,16 @@
             </objects>
             <point key="canvasLocation" x="1021.3953488372093" y="-2.5751072961373391"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="ZgZ-Sr-bh0">
             <objects>
-                <viewController id="QMS-8Q-a6W" sceneMemberID="viewController">
+                <viewController id="QMS-8Q-a6W" customClass="SettingsViewController" customModule="TestingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="01u-XM-dlo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pZS-K3-z3S">
-                                <rect key="frame" x="80" y="232" width="160" height="84"/>
+                                <rect key="frame" x="80" y="50" width="160" height="84"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUG-9p-UCa">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
@@ -118,27 +118,66 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HW4-1A-6kd">
+                                <rect key="frame" x="105" y="218" width="110" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JX-Dl-jpG">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="1dh-kS-H6J" kind="unwind" unwindAction="unwindFor:" id="gwa-N7-9yY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-cG-aDU">
+                                        <rect key="frame" x="0.0" y="56" width="110" height="56"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Close">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeButtonAction" destination="QMS-8Q-a6W" eventType="touchUpInside" id="dLC-Rv-9wP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cwu-hh-qME"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pZS-K3-z3S" firstAttribute="centerY" secondItem="01u-XM-dlo" secondAttribute="centerY" id="WQc-fK-TY3"/>
+                            <constraint firstItem="pZS-K3-z3S" firstAttribute="top" secondItem="cwu-hh-qME" secondAttribute="top" constant="50" id="AgU-eO-ih1"/>
+                            <constraint firstItem="HW4-1A-6kd" firstAttribute="centerX" secondItem="01u-XM-dlo" secondAttribute="centerX" id="VQ2-um-zX5"/>
                             <constraint firstItem="cwu-hh-qME" firstAttribute="trailing" secondItem="pZS-K3-z3S" secondAttribute="trailing" constant="80" id="YIc-Jo-viz"/>
+                            <constraint firstItem="HW4-1A-6kd" firstAttribute="centerY" secondItem="01u-XM-dlo" secondAttribute="centerY" id="ceU-qc-rLR"/>
                             <constraint firstItem="pZS-K3-z3S" firstAttribute="leading" secondItem="cwu-hh-qME" secondAttribute="leading" constant="80" id="hRc-WF-zpf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OWe-vJ-CSw">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="76E-Rr-IMA">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="cancelButtonAction" destination="QMS-8Q-a6W" id="sYc-eO-LyR"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="j3Y-c8-wRs">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="saveButtonAction:" destination="QMS-8Q-a6W" id="s7g-x9-kXu"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="maxValueTF" destination="J8N-tH-MNN" id="vRC-Ag-9hY"/>
+                        <outlet property="minValueTF" destination="aUG-9p-UCa" id="AdA-zD-EiT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wg-NC-R4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1dh-kS-H6J" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2829.375" y="-3.1690140845070425"/>
+            <point key="canvasLocation" x="2048" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S3f-bm-6c6">
@@ -158,24 +197,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxP-0x-hIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122.79069767441861" y="-2.5751072961373391"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bQK-qd-8V4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vvH-Uj-CPD" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AlS-vZ-I2O">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="QMS-8Q-a6W" kind="relationship" relationship="rootViewController" id="huX-Bc-h7I"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CLE-cu-QI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1831.875" y="-3.1690140845070425"/>
         </scene>
     </scenes>
     <resources>
