@@ -53,6 +53,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ML-Em-9hp">
                                 <rect key="frame" x="70" y="440" width="180" height="48"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Generate!" cornerStyle="capsule">
@@ -76,7 +77,14 @@
                             <constraint firstItem="ylU-VA-8Hr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zBg-7G-Cii"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Randomizer" id="ph0-fT-1vq"/>
+                    <navigationItem key="navigationItem" title="Randomizer" id="ph0-fT-1vq">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="FFO-Gb-c7Y">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="QMS-8Q-a6W" kind="show" id="byn-Vj-5aB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="maximumValueLabel" destination="z5B-hm-FV4" id="yoj-vD-Uxv"/>
                         <outlet property="minimumValueLabel" destination="7VY-A0-Xpc" id="5Fq-CW-V0w"/>
@@ -87,6 +95,22 @@
             </objects>
             <point key="canvasLocation" x="1021.3953488372093" y="-2.5751072961373391"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ZgZ-Sr-bh0">
+            <objects>
+                <viewController id="QMS-8Q-a6W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01u-XM-dlo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cwu-hh-qME"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OWe-vJ-CSw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wg-NC-R4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832" y="-3"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="S3f-bm-6c6">
             <objects>
@@ -95,6 +119,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="h7h-yu-8zA">
                         <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -107,6 +132,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
