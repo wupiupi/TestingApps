@@ -18,6 +18,11 @@ final class ViewController: UIViewController {
         let minVal = Int(minimumValueLabel.text ?? "") ?? 0
         let maxVal = Int(maximumValueLabel.text ?? "") ?? 100
         
+        if minVal > maxVal {
+            showAlert()
+            return
+        }
+        
         resultValueLabel.text = Int.random(in: minVal...maxVal).formatted()
     }
     
