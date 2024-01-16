@@ -15,6 +15,10 @@ final class ViewController: UIViewController {
     
     
     @IBAction func generateButtonAction() {
+        let minVal = Int(minimumValueLabel.text ?? "") ?? 0
+        let maxVal = Int(maximumValueLabel.text ?? "") ?? 100
+        
+        resultValueLabel.text = Int.random(in: minVal...maxVal).formatted()
     }
     
 }
