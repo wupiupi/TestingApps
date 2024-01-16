@@ -13,12 +13,23 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let settingsVC = segue.destination as? SettingsViewController
+        settingsVC?.maxVal = maximumValueLabel.text
+        settingsVC?.minVal = minimumValueLabel.text
+    }
     
     @IBAction func generateButtonAction() {
         let minVal = Int(minimumValueLabel.text ?? "") ?? 0
         let maxVal = Int(maximumValueLabel.text ?? "") ?? 100
         
         resultValueLabel.text = Int.random(in: minVal...maxVal).formatted()
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        let settingsVC = segue.source as? SettingsViewController
+        maximumValueLabel.text = settingsVC?.maxValueTF.text
+        minimumValueLabel.text = settingsVC?.minValueTF.text
     }
     
 }
