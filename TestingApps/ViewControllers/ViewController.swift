@@ -16,16 +16,25 @@ final class LoginViewController: UIViewController {
         aboutVC?.username = username
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard usernameTextField.text == username, passwordTextField.text == password else {
+            showAlert(title: "Error", message: "Invalid data") {
+                self.passwordTextField.text = nil
+            }
+            return false
+        }
+        return true
+    }
+    
     // MARK: - IB Actions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTextField.text = nil
         passwordTextField.text = nil
-    }
-    
-    @IBAction func loginButtonDidTapped() {
-        if !(usernameTextField.text == username && passwordTextField.text == password) {
-            showAlert(title: "Error!", message: "Login or password is invalid")
-        }
     }
     
     @IBAction func forgotUsernameButtonDIdTapped() {
@@ -38,7 +47,7 @@ final class LoginViewController: UIViewController {
 }
 
 private extension LoginViewController {
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -46,7 +55,7 @@ private extension LoginViewController {
         )
         
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.passwordTextField.text = nil
+            completion?()
         }
         
         alert.addAction(action)
