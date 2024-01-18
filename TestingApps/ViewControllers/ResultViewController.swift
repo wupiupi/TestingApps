@@ -9,4 +9,7 @@ import UIKit
 
 final class ResultViewController: UIViewController {
     
+    @IBAction func doneButtonDidTapped() {
+        dismiss(animated: true)
+    }
 }
