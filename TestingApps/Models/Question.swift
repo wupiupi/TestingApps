@@ -10,6 +10,40 @@ struct Question {
     let type: QuestionType
     let answers: [Answer]
     
+    static func getQuestions() -> [Question] {
+        [
+            Question(
+                title: "Какую пищу Вы предпочитаете?",
+                type: .single,
+                answers: [
+                    Answer(title: "Стейк", animal: .dog),
+                    Answer(title: "Рыба", animal: .cat),
+                    Answer(title: "Морковь", animal: .rabbit),
+                    Answer(title: "Кукуруза", animal: .turtle)
+                ]
+            ),
+            Question(
+                title: "Что Вам нравится больше?",
+                type: .multiple,
+                answers: [
+                    Answer(title: "Плавать", animal: .dog),
+                    Answer(title: "Спать", animal: .cat),
+                    Answer(title: "Обниматься", animal: .rabbit),
+                    Answer(title: "Есть", animal: .turtle)
+                ]
+            ),
+            Question(
+                title: "Любите ли Вы поездки на машине?",
+                type: .ranged,
+                answers: [
+                    Answer(title: "Ненавижу", animal: .cat),
+                    Answer(title: "Нервничаю", animal: .rabbit),
+                    Answer(title: "Не замечаю", animal: .turtle),
+                    Answer(title: "Обожаю", animal: .dog)
+                ]
+            )
+        ]
+    }
 }
 
 enum QuestionType {
