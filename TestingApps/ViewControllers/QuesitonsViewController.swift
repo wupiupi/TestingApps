@@ -104,7 +104,7 @@ private extension QuestionsViewController {
         singleStackView.isHidden.toggle()
         
         for (button, answer) in zip(singleButtons, answers) {
-            button.titleLabel?.text = answer.title
+            button.setTitle(answer.title, for: .normal)
         }
     }
     
