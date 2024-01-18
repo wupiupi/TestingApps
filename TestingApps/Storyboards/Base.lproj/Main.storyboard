@@ -54,7 +54,7 @@
         <!--Вопрос №-->
         <scene sceneID="TfU-dI-KIt">
             <objects>
-                <viewController id="c3n-WO-iY9" sceneMemberID="viewController">
+                <viewController id="c3n-WO-iY9" customClass="QuestionsViewController" customModule="TestingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wD2-Io-jS6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-o7-JVj">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-o7-JVj" userLabel="Ranged Stack View">
                                 <rect key="frame" x="16" y="233.5" width="288" height="101"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gfd-Pk-mgR">
@@ -94,11 +94,14 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-3L-WWM">
                                         <rect key="frame" x="0.0" y="66.5" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangedButtonDidTapped" destination="c3n-WO-iY9" eventType="touchUpInside" id="bHu-gj-l1g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z6D-fq-YCc">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z6D-fq-YCc" userLabel="Multiple Stack View">
                                 <rect key="frame" x="16" y="186.5" width="288" height="195"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-aS-0Ro">
@@ -160,13 +163,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-bK-dTN">
                                         <rect key="frame" x="0.0" y="164" width="288" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="multipleButtonDidTapped" destination="c3n-WO-iY9" eventType="touchUpInside" id="8eo-AS-WGQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-xG-fN3">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-xG-fN3" userLabel="Single Stack View">
                                 <rect key="frame" x="119" y="184" width="82.5" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sZ-EU-Ed8">
@@ -175,6 +181,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonDidTapped:" destination="c3n-WO-iY9" eventType="touchUpInside" id="CwA-24-RLI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-k5-etj">
                                         <rect key="frame" x="0.0" y="54" width="82.5" height="38"/>
@@ -182,6 +191,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonDidTapped:" destination="c3n-WO-iY9" eventType="touchUpInside" id="bYk-wA-eqY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wh-Z6-9Vl">
                                         <rect key="frame" x="0.0" y="108" width="82.5" height="38"/>
@@ -189,6 +201,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonDidTapped:" destination="c3n-WO-iY9" eventType="touchUpInside" id="jgi-WU-DgG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLf-OJ-3JU">
                                         <rect key="frame" x="0.0" y="162" width="82.5" height="38"/>
@@ -196,6 +211,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonDidTapped:" destination="c3n-WO-iY9" eventType="touchUpInside" id="Rm9-wV-wut"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -221,6 +239,26 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="f2W-J1-zXP"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="Z6D-fq-YCc" id="UH6-L7-cZS"/>
+                        <outlet property="progressView" destination="9dI-PH-9aK" id="rP3-bS-B1N"/>
+                        <outlet property="questionLabel" destination="y4N-Ir-mxx" id="fzN-qS-am0"/>
+                        <outlet property="rangedSlider" destination="gfd-Pk-mgR" id="s5B-9F-6gP"/>
+                        <outlet property="rangedStackView" destination="Kj6-o7-JVj" id="LXN-kf-9L5"/>
+                        <outlet property="singleStackView" destination="3QB-xG-fN3" id="3OM-w4-wUt"/>
+                        <outletCollection property="singleButtons" destination="8sZ-EU-Ed8" collectionClass="NSMutableArray" id="B3A-H4-hND"/>
+                        <outletCollection property="singleButtons" destination="wO7-k5-etj" collectionClass="NSMutableArray" id="KL6-AX-HB3"/>
+                        <outletCollection property="singleButtons" destination="6Wh-Z6-9Vl" collectionClass="NSMutableArray" id="fcT-6y-Qox"/>
+                        <outletCollection property="singleButtons" destination="QLf-OJ-3JU" collectionClass="NSMutableArray" id="T9n-BY-e2k"/>
+                        <outletCollection property="multipleLabels" destination="UI7-i5-5KQ" collectionClass="NSMutableArray" id="CnK-pN-qnw"/>
+                        <outletCollection property="multipleLabels" destination="gYE-5Y-twg" collectionClass="NSMutableArray" id="Tdu-6y-kxa"/>
+                        <outletCollection property="multipleLabels" destination="nWt-gd-gIx" collectionClass="NSMutableArray" id="n1z-Zr-KAK"/>
+                        <outletCollection property="multipleLabels" destination="Ho9-Px-2Qi" collectionClass="NSMutableArray" id="ZbT-s0-pcz"/>
+                        <outletCollection property="multipleSwitches" destination="MUf-TL-bc0" collectionClass="NSMutableArray" id="Bhx-pf-6OV"/>
+                        <outletCollection property="multipleSwitches" destination="TGK-jj-jud" collectionClass="NSMutableArray" id="hTY-mt-lny"/>
+                        <outletCollection property="multipleSwitches" destination="npA-1T-vun" collectionClass="NSMutableArray" id="XVD-FB-VXv"/>
+                        <outletCollection property="multipleSwitches" destination="UaF-a7-n5H" collectionClass="NSMutableArray" id="AEN-cG-CpC"/>
+                        <outletCollection property="rangedLabels" destination="EQe-xh-sar" collectionClass="NSMutableArray" id="AVl-7W-1me"/>
+                        <outletCollection property="rangedLabels" destination="v4Y-PE-6TH" collectionClass="NSMutableArray" id="2Oa-Ts-jGy"/>
                         <segue destination="k1H-F8-62W" kind="show" identifier="showResult" id="GEx-O0-Qau"/>
                     </connections>
                 </viewController>
@@ -231,7 +269,7 @@
         <!--Результат-->
         <scene sceneID="bEA-FD-CTR">
             <objects>
-                <viewController id="k1H-F8-62W" sceneMemberID="viewController">
+                <viewController id="k1H-F8-62W" customClass="ResultViewController" customModule="TestingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dsj-dD-vmQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
