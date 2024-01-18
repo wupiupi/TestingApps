@@ -36,12 +36,8 @@ final class QuestionsViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let answersIndex = currentQuestion.answers.count - 1
-        rangedSlider.maximumValue = Float(answersIndex)
-        rangedSlider.value = rangedSlider.maximumValue / 2
-        
         updateUI()
+        setupSlider()
     }
     
     // MARK: - IB Actions
@@ -85,6 +81,12 @@ private extension QuestionsViewController {
         progressView.setProgress(progress, animated: true)
         
         showCurrentAnswers(for: currentQuestion.type)
+    }
+    
+    func setupSlider() {
+        let maxAnswersIndex = currentQuestion.answers.count - 1
+        rangedSlider.maximumValue = Float(maxAnswersIndex)
+        rangedSlider.value = rangedSlider.maximumValue / 2
     }
     
     func showCurrentAnswers(for questionType: QuestionType) {
