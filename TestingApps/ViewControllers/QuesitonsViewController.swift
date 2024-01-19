@@ -29,8 +29,8 @@ final class QuestionsViewController: UIViewController {
     private var chosenAnswers: [Answer] = []
     private let questions = Question.getQuestions()
     
-    private var currentQuestion: Question {
-        questions[questionIndex]
+    private var currentAnswers: [Answer] {
+        questions[questionIndex].answers
     }
     
     // MARK: - Life Cycle
@@ -40,16 +40,24 @@ final class QuestionsViewController: UIViewController {
         setupSlider()
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else {
+            return
+        }
+        resultVC.answers = chosenAnswers
+    }
+    
     // MARK: - IB Actions
     @IBAction func singleButtonDidTapped(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
-        chosenAnswers.append(currentQuestion.answers[buttonIndex])
+        chosenAnswers.append(currentAnswers[buttonIndex])
         
         nextQuestion()
     }
     
     @IBAction func multipleButtonDidTapped() {
-        for (multipleSwitch, answer) in zip(multipleSwitches, currentQuestion.answers) {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
             if multipleSwitch.isOn {
                 chosenAnswers.append(answer)
             }
@@ -59,7 +67,7 @@ final class QuestionsViewController: UIViewController {
     
     @IBAction func rangedButtonDidTapped() {
         let index = lrintf(rangedSlider.value)
-        chosenAnswers.append(currentQuestion.answers[index])
+        chosenAnswers.append(currentAnswers[index])
         nextQuestion()
     }
     
@@ -75,6 +83,7 @@ private extension QuestionsViewController {
         
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         
+        let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.title
         
         let progress = Float(questionIndex) / Float(questions.count)
@@ -84,19 +93,19 @@ private extension QuestionsViewController {
     }
     
     func setupSlider() {
-        let maxAnswersIndex = currentQuestion.answers.count - 1
+        let maxAnswersIndex = currentAnswers.count - 1
         rangedSlider.maximumValue = Float(maxAnswersIndex)
         rangedSlider.value = rangedSlider.maximumValue / 2
     }
     
     func showCurrentAnswers(for questionType: QuestionType) {
-        switch currentQuestion.type {
+        switch questionType {
             case .single:
-                showSingleStackView(with: currentQuestion.answers)
+                showSingleStackView(with: currentAnswers)
             case .multiple:
-                showMultipleStackView(with: currentQuestion.answers)
+                showMultipleStackView(with: currentAnswers)
             case .ranged:
-                showRangedStackView(with: currentQuestion.answers)
+                showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -128,6 +137,6 @@ private extension QuestionsViewController {
         
         questionIndex < questions.count
         ? updateUI()
-        : performSegue(withIdentifier: "showResult", sender: nil)
+        : performSegue(withIdentifier: "showResult", sender: chosenAnswers)
     }
 }
