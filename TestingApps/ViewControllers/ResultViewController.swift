@@ -29,6 +29,11 @@ final class ResultViewController: UIViewController {
 private extension ResultViewController {
     func getResult(with answers: [Answer]) {
         
+        /*
+         let mostFrequentAnimal = Dictionary(grouping: answers) { $0.value > $1.value}
+            .sorted { $0.value.count > $1.value.count }.first?.key
+         */
+        
         var answersCounter: [Animal: Int] = [:]
         let animals = answers.map { $0.animal }
         
