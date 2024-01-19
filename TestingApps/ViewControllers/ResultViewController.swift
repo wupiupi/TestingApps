@@ -30,7 +30,7 @@ private extension ResultViewController {
     func getResult(with answers: [Answer]) {
         
         /*
-         let mostFrequentAnimal = Dictionary(grouping: answers) { $0.value > $1.value}
+         let mostFrequentAnimal = Dictionary(grouping: answers) { $0.animal }
             .sorted { $0.value.count > $1.value.count }.first?.key
          */
         
