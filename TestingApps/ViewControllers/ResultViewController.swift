@@ -33,7 +33,7 @@ private extension ResultViewController {
         let animals = answers.map { $0.animal }
         
         for animal in animals {
-            answersCounter[animal] = (answersCounter[animal] ?? 0) + 1
+            answersCounter[animal, default: 0] += 1
         }
         
         let sortedAnswersCounter = answersCounter.sorted { $0.value > $1.value }
