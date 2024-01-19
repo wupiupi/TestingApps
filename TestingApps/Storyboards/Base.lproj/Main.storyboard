@@ -275,16 +275,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ASi-s1-Y54">
-                                <rect key="frame" x="95" y="176.5" width="130.5" height="75.5"/>
+                                <rect key="frame" x="16" y="186.5" width="288" height="75.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-NM-Nsn">
-                                        <rect key="frame" x="0.0" y="0.0" width="130.5" height="41"/>
+                                        <rect key="frame" x="79" y="0.0" width="130.5" height="41"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWP-6l-tQ3">
-                                        <rect key="frame" x="12" y="49" width="106.5" height="26.5"/>
+                                        <rect key="frame" x="91" y="49" width="106.5" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -295,8 +295,9 @@
                         <viewLayoutGuide key="safeArea" id="BnO-mJ-2aj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ASi-s1-Y54" firstAttribute="centerX" secondItem="Dsj-dD-vmQ" secondAttribute="centerX" id="6Hc-xG-xni"/>
-                            <constraint firstItem="ASi-s1-Y54" firstAttribute="centerY" secondItem="Dsj-dD-vmQ" secondAttribute="centerY" constant="-70" id="FNp-QW-RBl"/>
+                            <constraint firstItem="ASi-s1-Y54" firstAttribute="centerY" secondItem="Dsj-dD-vmQ" secondAttribute="centerY" constant="-60" id="4zO-tM-6kO"/>
+                            <constraint firstItem="BnO-mJ-2aj" firstAttribute="trailing" secondItem="ASi-s1-Y54" secondAttribute="trailing" constant="16" id="P6S-Ni-OxH"/>
+                            <constraint firstItem="ASi-s1-Y54" firstAttribute="leading" secondItem="BnO-mJ-2aj" secondAttribute="leading" constant="16" id="aPZ-qu-taD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="w6c-0H-IWL">
@@ -306,6 +307,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalDescriptionLabel" destination="CWP-6l-tQ3" id="MqU-NL-vw7"/>
+                        <outlet property="animalTypeLabel" destination="Ovm-NM-Nsn" id="D2y-yR-xrL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSU-Co-7ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
