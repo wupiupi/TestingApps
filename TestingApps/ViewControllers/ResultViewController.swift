@@ -18,7 +18,7 @@ final class ResultViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         
-        updateResult(with: answers)
+        getResult(with: answers)
     }
     
     @IBAction func doneButtonDidTapped() {
@@ -27,7 +27,7 @@ final class ResultViewController: UIViewController {
 }
 
 private extension ResultViewController {
-    func updateResult(with answers: [Answer]) {
+    func getResult(with answers: [Answer]) {
         
         var answersCounter: [Animal: Int] = [:]
         let animals = answers.map { $0.animal }
@@ -39,7 +39,11 @@ private extension ResultViewController {
         let sortedAnswersCounter = answersCounter.sorted { $0.value > $1.value }
         guard let resultAnimal = sortedAnswersCounter.first?.key else { return }
         
-        animalTypeLabel.text = String(resultAnimal.rawValue)
-        animalDescriptionLabel.text = resultAnimal.description
+        updateLabels(with: resultAnimal)
+    }
+    
+    func updateLabels(with animal: Animal) {
+        animalTypeLabel.text = String(animal.rawValue)
+        animalDescriptionLabel.text = animal.description
     }
 }
