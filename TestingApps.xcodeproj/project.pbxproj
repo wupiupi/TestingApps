@@ -12,9 +12,8 @@
 		A04F3B2A2B531A3A0043D841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04F3B282B531A3A0043D841 /* Main.storyboard */; };
 		A04F3B2C2B531A3A0043D841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04F3B2B2B531A3A0043D841 /* Assets.xcassets */; };
 		A04F3B2F2B531A3A0043D841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04F3B2D2B531A3A0043D841 /* LaunchScreen.storyboard */; };
-		A0D9B9BE2B5878330070F7F9 /* QuesitonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9B9BD2B5878330070F7F9 /* QuesitonsViewController.swift */; };
-		A0D9B9C02B58783C0070F7F9 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9B9BF2B58783C0070F7F9 /* ResultViewController.swift */; };
-		A0D9B9C32B58788C0070F7F9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9B9C22B58788C0070F7F9 /* Question.swift */; };
+		A0C928722B5C45DF00D4064A /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C928712B5C45DF00D4064A /* ColorViewController.swift */; };
+		A0C928742B5C45F000D4064A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C928732B5C45F000D4064A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +24,8 @@
 		A04F3B2B2B531A3A0043D841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04F3B2E2B531A3A0043D841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A04F3B302B531A3A0043D841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0D9B9BD2B5878330070F7F9 /* QuesitonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesitonsViewController.swift; sourceTree = "<group>"; };
-		A0D9B9BF2B58783C0070F7F9 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		A0D9B9C22B58788C0070F7F9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A0C928712B5C45DF00D4064A /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		A0C928732B5C45F000D4064A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +80,8 @@
 		A04F3B392B531AE80043D841 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A0D9B9BD2B5878330070F7F9 /* QuesitonsViewController.swift */,
-				A0D9B9BF2B58783C0070F7F9 /* ResultViewController.swift */,
+				A0C928712B5C45DF00D4064A /* ColorViewController.swift */,
+				A0C928732B5C45F000D4064A /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -100,7 +98,6 @@
 		A0D9B9C12B58786F0070F7F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A0D9B9C22B58788C0070F7F9 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,11 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D9B9C32B58788C0070F7F9 /* Question.swift in Sources */,
-				A0D9B9BE2B5878330070F7F9 /* QuesitonsViewController.swift in Sources */,
 				A04F3B232B531A3A0043D841 /* AppDelegate.swift in Sources */,
+				A0C928722B5C45DF00D4064A /* ColorViewController.swift in Sources */,
 				A04F3B252B531A3A0043D841 /* SceneDelegate.swift in Sources */,
-				A0D9B9C02B58783C0070F7F9 /* ResultViewController.swift in Sources */,
+				A0C928742B5C45F000D4064A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
