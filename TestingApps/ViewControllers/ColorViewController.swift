@@ -15,10 +15,6 @@ final class ColorViewController: UIViewController {
     // MARK: - IB Outlet
     @IBOutlet var colorView: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

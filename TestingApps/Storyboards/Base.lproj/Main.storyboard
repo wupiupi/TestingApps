@@ -106,19 +106,19 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lmf-dm-UZb">
                                                 <rect key="frame" x="-2" y="0.0" width="147" height="35"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="gKK-IS-ihj" eventType="valueChanged" id="suq-pG-CsR"/>
+                                                    <action selector="sliderValueDidChanged:" destination="gKK-IS-ihj" eventType="valueChanged" id="mFn-Oq-Lre"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oto-dq-XrY">
                                                 <rect key="frame" x="-2" y="39" width="147" height="35"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="gKK-IS-ihj" eventType="valueChanged" id="hqy-xy-Xgc"/>
+                                                    <action selector="sliderValueDidChanged:" destination="gKK-IS-ihj" eventType="valueChanged" id="aGw-ZN-GDO"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-yG-FHJ">
                                                 <rect key="frame" x="-2" y="78" width="147" height="35"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="gKK-IS-ihj" eventType="valueChanged" id="KKJ-kv-uWe"/>
+                                                    <action selector="sliderValueDidChanged:" destination="gKK-IS-ihj" eventType="valueChanged" id="eu7-Sq-BkL"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -164,26 +164,26 @@
                     <navigationItem key="navigationItem" title="Settings" id="WGs-mZ-SFl">
                         <barButtonItem key="leftBarButtonItem" systemItem="save" id="jLP-47-oGd">
                             <connections>
-                                <action selector="barButtonDidTapped:" destination="gKK-IS-ihj" id="Fal-Ak-10v"/>
+                                <action selector="barButtonItemDidTapped:" destination="gKK-IS-ihj" id="q2u-kC-Yol"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" tag="1" systemItem="cancel" id="F87-fv-gNH">
                             <connections>
-                                <action selector="barButtonDidTapped:" destination="gKK-IS-ihj" id="Al0-c4-ooB"/>
+                                <action selector="barButtonItemDidTapped:" destination="gKK-IS-ihj" id="bWb-gO-jyu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="blueLabel" destination="gX5-IN-KMS" id="EbB-MY-SF2"/>
-                        <outlet property="blueSlider" destination="yEu-yG-FHJ" id="jqv-lI-2Mt"/>
-                        <outlet property="blueTextField" destination="tvr-c8-WHl" id="4qa-Ja-WQX"/>
-                        <outlet property="colorView" destination="WGI-Dv-mDU" id="vwG-zu-DeW"/>
-                        <outlet property="greenLabel" destination="x5Y-UV-MxT" id="bif-8I-vsV"/>
-                        <outlet property="greenSlider" destination="oto-dq-XrY" id="DYH-wa-TMb"/>
-                        <outlet property="greenTextField" destination="OHt-bp-RXv" id="kvc-1J-Y0P"/>
-                        <outlet property="redLabel" destination="diI-mF-4fA" id="1lf-Cu-l7N"/>
-                        <outlet property="redSlider" destination="Lmf-dm-UZb" id="uGt-JX-vGJ"/>
-                        <outlet property="redTextField" destination="PXe-ng-SZQ" id="IUp-mR-yen"/>
+                        <outlet property="blueLabel" destination="gX5-IN-KMS" id="peC-Rv-l4e"/>
+                        <outlet property="blueSlider" destination="yEu-yG-FHJ" id="jjA-KL-9Dt"/>
+                        <outlet property="blueTextField" destination="tvr-c8-WHl" id="xcu-2L-mHp"/>
+                        <outlet property="colorView" destination="WGI-Dv-mDU" id="f5m-xx-huf"/>
+                        <outlet property="greenLabel" destination="x5Y-UV-MxT" id="cRG-Fq-UJ8"/>
+                        <outlet property="greenSlider" destination="oto-dq-XrY" id="lHQ-WU-48D"/>
+                        <outlet property="greenTextField" destination="OHt-bp-RXv" id="UvP-Lx-wt8"/>
+                        <outlet property="redLabel" destination="diI-mF-4fA" id="2Qe-XJ-C2x"/>
+                        <outlet property="redSlider" destination="Lmf-dm-UZb" id="Tn9-l2-fsJ"/>
+                        <outlet property="redTextField" destination="PXe-ng-SZQ" id="ISl-7m-Tva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAT-ck-8bU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
