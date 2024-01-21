@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Color View Controller-->
+        <!--Color-->
         <scene sceneID="IZb-1r-I6V">
             <objects>
                 <viewController id="iHd-as-wrk" customClass="ColorViewController" customModule="TestingApps" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,32 +18,35 @@
                         <viewLayoutGuide key="safeArea" id="vb2-Uy-ohL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IQV-Fs-rRd">
+                    <navigationItem key="navigationItem" title="Color" id="IQV-Fs-rRd">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="QKp-kr-WIi">
                             <connections>
-                                <segue destination="gKK-IS-ihj" kind="show" id="KSz-vO-2q0"/>
+                                <segue destination="UJB-9G-zC9" kind="presentation" id="KSz-vO-2q0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="colorView" destination="wbg-rS-9VG" id="vCx-SG-njI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZg-24-VVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916.25" y="-2.112676056338028"/>
+            <point key="canvasLocation" x="1740" y="-2"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="qzO-jD-6sE">
             <objects>
                 <viewController id="gKK-IS-ihj" customClass="SettingsViewController" customModule="TestingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C8e-gG-RNs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGI-Dv-mDU">
-                                <rect key="frame" x="16" y="132.5" width="288" height="128"/>
+                                <rect key="frame" x="16" y="124.5" width="288" height="123.5"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZYv-9S-Gdl">
-                                <rect key="frame" x="16" y="308.5" width="288" height="100"/>
+                                <rect key="frame" x="16" y="296" width="288" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u14-za-XaP">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="100"/>
@@ -135,7 +138,18 @@
                             <constraint firstItem="nAq-5M-D1R" firstAttribute="trailing" secondItem="WGI-Dv-mDU" secondAttribute="trailing" constant="16" id="vDZ-dv-hdo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WGs-mZ-SFl"/>
+                    <navigationItem key="navigationItem" title="Settings" id="WGs-mZ-SFl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="jLP-47-oGd">
+                            <connections>
+                                <action selector="barButtonDidTapped:" destination="gKK-IS-ihj" id="Fal-Ak-10v"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" tag="1" systemItem="cancel" id="F87-fv-gNH">
+                            <connections>
+                                <action selector="barButtonDidTapped:" destination="gKK-IS-ihj" id="Al0-c4-ooB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="blueSlider" destination="yEu-yG-FHJ" id="jqv-lI-2Mt"/>
                         <outlet property="blueValueLabel" destination="gX5-IN-KMS" id="EbB-MY-SF2"/>
@@ -148,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAT-ck-8bU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="-2.112676056338028"/>
+            <point key="canvasLocation" x="3392" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qhe-9n-IxV">
@@ -156,7 +170,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLT-zT-eUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bUm-eU-wwo">
-                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -167,6 +181,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5B-BN-UQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918.75" y="-2.112676056338028"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R0d-aK-z6H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UJB-9G-zC9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hSq-EG-i3f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gKK-IS-ihj" kind="relationship" relationship="rootViewController" id="ndY-xY-wrC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="113-mm-l8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2546.25" y="-2.112676056338028"/>
         </scene>
     </scenes>
     <resources>

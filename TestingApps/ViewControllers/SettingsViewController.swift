@@ -20,11 +20,16 @@ final class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    // MARK: - Public Properties
+    var color: UIColor!
+    weak var delegate: SettingsViewControllerDelegate?
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorView.backgroundColor = color
         setupUI()
-        updateView()
+        updateSlidersValue(from: color)
     }
     
     // MARK: - IB Actions
@@ -40,12 +45,20 @@ final class SettingsViewController: UIViewController {
         updateView()
     }
     
+    @IBAction func barButtonDidTapped(_ sender: UIBarButtonItem) {
+        if sender.tag == 0 {
+            delegate?.updateViewBackground(with: colorView.backgroundColor ?? .white)
+        }
+        dismiss(animated: true)
+    }
 }
 
 // MARK: - Private Methods
 private extension SettingsViewController {
     func setupUI() {
         colorView.layer.cornerRadius = 16
+        
+        updateSlidersValue(from: color)
         
         redSlider.minimumTrackTintColor = .systemRed
         greenSlider.minimumTrackTintColor = .systemGreen
@@ -67,6 +80,13 @@ private extension SettingsViewController {
             blue: blueSlider.value.cgFloat(),
             alpha: 1
         )
+    }
+    
+    func updateSlidersValue(from color: UIColor) {
+        let ciColor = CIColor(color: color)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
     }
 }
 
