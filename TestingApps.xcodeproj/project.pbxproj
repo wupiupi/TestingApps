@@ -7,33 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0184DC52B6961DE00012459 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0184DC42B6961DE00012459 /* MainViewController.swift */; };
+		A0184DC82B69624500012459 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = A0184DC72B69624500012459 /* SpringAnimation */; };
+		A0184DCA2B69628100012459 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0184DC92B69628100012459 /* Animation.swift */; };
+		A0184DCC2B69629800012459 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0184DCB2B69629800012459 /* DataSource.swift */; };
 		A04F3B232B531A3A0043D841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F3B222B531A3A0043D841 /* AppDelegate.swift */; };
 		A04F3B252B531A3A0043D841 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F3B242B531A3A0043D841 /* SceneDelegate.swift */; };
 		A04F3B2C2B531A3A0043D841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04F3B2B2B531A3A0043D841 /* Assets.xcassets */; };
+		A06E07522B6974CF008843DF /* Extension + Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E07512B6974CF008843DF /* Extension + Double.swift */; };
 		A0CF0C582B5F009D0013F684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CF0C572B5F009D0013F684 /* Main.storyboard */; };
 		A0CF0C612B5F0BC50013F684 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CF0C602B5F0BC50013F684 /* Launch Screen.storyboard */; };
-		A0D066562B5FB03E003FEC31 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D066552B5FB03E003FEC31 /* DataStore.swift */; };
-		A0D066582B5FB04B003FEC31 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D066572B5FB04B003FEC31 /* Contact.swift */; };
-		A0D0665A2B5FB312003FEC31 /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D066592B5FB312003FEC31 /* ContactsListViewController.swift */; };
-		A0D0665C2B5FB584003FEC31 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0665B2B5FB584003FEC31 /* ContactDetailsViewController.swift */; };
-		A0FFF00A2B5FE03E009C1068 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FFF0092B5FE03E009C1068 /* TabBarViewController.swift */; };
-		A0FFF00C2B5FE72F009C1068 /* ContactsSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FFF00B2B5FE72F009C1068 /* ContactsSectionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0184DC42B6961DE00012459 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A0184DC92B69628100012459 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		A0184DCB2B69629800012459 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		A04F3B1F2B531A3A0043D841 /* TestingApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04F3B222B531A3A0043D841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A04F3B242B531A3A0043D841 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A04F3B2B2B531A3A0043D841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04F3B302B531A3A0043D841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A06E07512B6974CF008843DF /* Extension + Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Double.swift"; sourceTree = "<group>"; };
 		A0CF0C572B5F009D0013F684 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A0CF0C602B5F0BC50013F684 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		A0D066552B5FB03E003FEC31 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		A0D066572B5FB04B003FEC31 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		A0D066592B5FB312003FEC31 /* ContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
-		A0D0665B2B5FB584003FEC31 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
-		A0FFF0092B5FE03E009C1068 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		A0FFF00B2B5FE72F009C1068 /* ContactsSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSectionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0184DC82B69624500012459 /* SpringAnimation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +65,7 @@
 		A04F3B212B531A3A0043D841 /* TestingApps */ = {
 			isa = PBXGroup;
 			children = (
+				A06E07502B6974B6008843DF /* Extenisions */,
 				A04F3B392B531AE80043D841 /* ViewControllers */,
 				A0D9B9C12B58786F0070F7F9 /* Models */,
 				A0CF0C5B2B5F010A0013F684 /* Services */,
@@ -89,10 +88,7 @@
 		A04F3B392B531AE80043D841 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A0FFF0092B5FE03E009C1068 /* TabBarViewController.swift */,
-				A0D066592B5FB312003FEC31 /* ContactsListViewController.swift */,
-				A0D0665B2B5FB584003FEC31 /* ContactDetailsViewController.swift */,
-				A0FFF00B2B5FE72F009C1068 /* ContactsSectionsViewController.swift */,
+				A0184DC42B6961DE00012459 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,10 +102,18 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		A06E07502B6974B6008843DF /* Extenisions */ = {
+			isa = PBXGroup;
+			children = (
+				A06E07512B6974CF008843DF /* Extension + Double.swift */,
+			);
+			path = Extenisions;
+			sourceTree = "<group>";
+		};
 		A0CF0C5B2B5F010A0013F684 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A0D066552B5FB03E003FEC31 /* DataStore.swift */,
+				A0184DCB2B69629800012459 /* DataSource.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -117,7 +121,7 @@
 		A0D9B9C12B58786F0070F7F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A0D066572B5FB04B003FEC31 /* Contact.swift */,
+				A0184DC92B69628100012459 /* Animation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +142,9 @@
 			dependencies = (
 			);
 			name = TestingApps;
+			packageProductDependencies = (
+				A0184DC72B69624500012459 /* SpringAnimation */,
+			);
 			productName = TestingApps;
 			productReference = A04F3B1F2B531A3A0043D841 /* TestingApps.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +173,9 @@
 				Base,
 			);
 			mainGroup = A04F3B162B531A3A0043D841;
+			packageReferences = (
+				A0184DC62B69624500012459 /* XCRemoteSwiftPackageReference "SpringAnimation" */,
+			);
 			productRefGroup = A04F3B202B531A3A0043D841 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,14 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D066582B5FB04B003FEC31 /* Contact.swift in Sources */,
+				A0184DC52B6961DE00012459 /* MainViewController.swift in Sources */,
 				A04F3B232B531A3A0043D841 /* AppDelegate.swift in Sources */,
-				A0D0665C2B5FB584003FEC31 /* ContactDetailsViewController.swift in Sources */,
-				A0D066562B5FB03E003FEC31 /* DataStore.swift in Sources */,
-				A0FFF00A2B5FE03E009C1068 /* TabBarViewController.swift in Sources */,
-				A0FFF00C2B5FE72F009C1068 /* ContactsSectionsViewController.swift in Sources */,
+				A06E07522B6974CF008843DF /* Extension + Double.swift in Sources */,
+				A0184DCA2B69628100012459 /* Animation.swift in Sources */,
+				A0184DCC2B69629800012459 /* DataSource.swift in Sources */,
 				A04F3B252B531A3A0043D841 /* SceneDelegate.swift in Sources */,
-				A0D0665A2B5FB312003FEC31 /* ContactsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0184DC62B69624500012459 /* XCRemoteSwiftPackageReference "SpringAnimation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LexDeBash/SpringAnimation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0184DC72B69624500012459 /* SpringAnimation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0184DC62B69624500012459 /* XCRemoteSwiftPackageReference "SpringAnimation" */;
+			productName = SpringAnimation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A04F3B172B531A3A0043D841 /* Project object */;
 }
